@@ -1,0 +1,43 @@
+
+h1 {
+  text-align: center;
+}
+
+img {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  padding: 10px;
+  border-style: solid;
+  text-align: center;
+  height: 300px;
+}
+
+.style-1 {
+  padding: 10px;
+  border: solid 1px;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+  margin: 20px;
+}
+.style-1:focus,
+.style-1.focus {
+  border-bottom: solid 2px #969696;
+}
+.wrap {
+	border: solid 1px;
+}
+
+.enter {
+	text-align: center;
+}
+
+.adminBtn {
+	display: flex;
+	  justify-content: center;
+}
+/*# sourceMappingURL=styles.css.map */

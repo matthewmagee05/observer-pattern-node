@@ -1,0 +1,5 @@
+mixin tire(tire = {})
+  .col-3.wrapper
+    img.tireImg(src=`/img/${tire.name}.jpeg` alt=`${tire.name} tire` height="200" width="100")
+    h4= tire.name
+    h5 Quantity #{tire.quantity}

@@ -1,0 +1,33 @@
+include mixins/_tire
+html
+  head
+    title= title
+  body
+    link(rel='stylesheet' href='../css/simple-grid.css', type='text/css') 
+    link(rel='stylesheet' href='../css/styles.css', type='text/css') 
+    h1 Magee Tires
+    .row
+      .col-1
+      each item in tires
+        each i in item
+          +tire(i)
+      .row
+        .col-3
+        .col-6
+          h4= success 
+          .wrap
+            h4.enter Please Enter a Real Email Address!!
+            form(action="/" method="POST" )
+              input.style-1(type="text" placeholder="Enter email address...." name="email")
+              select.style-1(name='tirePicker')
+                option(value="Bridgestone" name="Bridgestone") Bridgestone
+                option(value="Michelin" name="Michelin") Michelin
+                option(value="Firestone" name="Firestone") Firestone
+              input.style-1(type='submit' value='Notify Me')
+        .col-3
+      .row
+        .col-3
+        .col-6
+          form.adminBtn(action="/admin" method="GET")
+            input.style-1(type='submit' value='Go To Admin Panel')
+        .col-3

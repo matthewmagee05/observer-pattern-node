@@ -1,0 +1,44 @@
+
+html
+  head
+    title= title
+  body
+    link(rel='stylesheet' href='../css/simple-grid.css', type='text/css') 
+    link(rel='stylesheet' href='../css/styles.css', type='text/css')
+    h1 Magee Tires Admin
+    form(action="/admin" method="POST" )
+      .row
+        .col-3.wrapper
+          img.tireImg(src="/img/bridgestone.jpeg" alt="bridgestone tire" height="200" width="100")
+          h4 Bridgestone
+          h5 Quantity
+          select(name='bridgestoneQuantity')
+            option(selected) #{tireArr[0].quantity}
+            -for(let i = 0; i < 11; i++){
+            option(value='' + i name="#{i}") #{i}
+            -}
+        .col-3.wrapper
+          img.tireImg(src="/img/michelin.jpeg" alt="michelin tire" height="200" width="100")
+          h4 Michelin
+          h5 Quantity
+          select(name='michelinQuantity')
+            option(selected) #{tireArr[2].quantity}
+            -for(let i = 0; i < 11; i++){
+            option(value='' + i name="#{i}") #{i}
+            -}
+        .col-3.wrapper
+          img.tireImg(src="/img/firestone.jpeg" alt="firestone tire" height="200" width="100")
+          h4 Firestone
+          h5 Quantity
+          select(name='firestoneQuantity')
+            option(selected) #{tireArr[1].quantity}
+            -for(let i = 0; i < 11; i++){
+            option(value='' + i name="#{i}") #{i}
+            -}
+      .row
+        .col-4
+        .col-6
+          input.style-1.adminBtn(type='submit' value='Update Quantities')
+          input.style-1.adminBtn(type='submit' value='<<<<< Back' action="/")
+        .col-2
+
